@@ -1,18 +1,14 @@
 
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar text="Hola Gustavo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-      </header>
-    </div>
+    <>
+    <NavBar />
+    <ItemListContainer greeting="Hola, este es el contenido" />
+    </>
   );
 }
 
