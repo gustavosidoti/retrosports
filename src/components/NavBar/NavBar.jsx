@@ -1,37 +1,62 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
+function NavBar(props) {
+  let activeStyle = {
+    color: "#FF5733",
+  };
 
-function NavBar(props){
-  const algo = "backgroundColor: #e3f2fd;";
   return (
-    
     <nav className="navbar navbar-expand-xl navbar-light bg-light">
-  <div className="container-fluid">
-    <Link to ="/" className="navbar-brand">RetroSports</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse show" id="navbarDark">
-      <ul className="navbar-nav me-auto mb-2 mb-xl-0">
-        <li className="nav-item">
-          <Link to="/category/Argentina" className="nav-link" aria-current="page">Argentina</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/category/Argentina_Clubes" className="nav-link" aria-current="page">Argentina clubes</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/category/Inglaterra" className="nav-link" aria-current="page">Inglaterra</Link>
-        </li>
-      </ul>
-      <CartWidget />
-    </div>
-  </div>
-</nav>
-    
-      
-    
+      <div className="container-fluid">
+        <NavLink
+          className="navbar-brand"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          to="/"
+        >
+          RetroSports
+        </NavLink>
+
+        <div className="collapse navbar-collapse show" id="navbarDark">
+          <ul className="navbar-nav me-auto mb-2 mb-xl-0">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/category/Argentina"
+                aria-current="page"
+              >
+                Argentina
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/category/Argentina_Clubes"
+                aria-current="page"
+              >
+                Argentina clubes
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                to="/category/Inglaterra"
+                aria-current="page"
+              >
+                Inglaterra
+              </NavLink>
+            </li>
+          </ul>
+          <NavLink to="/cartWidgetList">
+            <CartWidget />
+          </NavLink> 
+        </div>
+      </div>
+    </nav>
   );
 }
 
