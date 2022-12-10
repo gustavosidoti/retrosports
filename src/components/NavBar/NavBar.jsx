@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 
 
@@ -8,20 +9,20 @@ function NavBar(props){
     
     <nav className="navbar navbar-expand-xl navbar-light bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="/">RetroSports</a>
+    <Link to ="/" className="navbar-brand">RetroSports</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark" aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse show" id="navbarDark">
       <ul className="navbar-nav me-auto mb-2 mb-xl-0">
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="/">Camisetas</a>
+          <Link to="/category/Argentina" className="nav-link" aria-current="page">Argentina</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="/">Pantalones</a>
+          <Link to="/category/Argentina_Clubes" className="nav-link" aria-current="page">Argentina clubes</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="/">Ofertas</a>
+          <Link to="/category/Inglaterra" className="nav-link" aria-current="page">Inglaterra</Link>
         </li>
       </ul>
       <CartWidget />

@@ -1,11 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
-const Item = () => {
+const Item = ({producto}) => {
     return (
-        <div> 
-         Item   
-        </div>
+        <>
+            <div> 
+            {producto.nombre}
+            </div>
+            <Link to={`/item/${producto.id}`}> 
+                <button>Ir Al Detalle</button> 
+            </Link>
+        </>
     )
 };
 

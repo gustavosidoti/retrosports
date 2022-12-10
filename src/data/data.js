@@ -2,7 +2,7 @@ export const data = [
 {
     id: 1,
     nombre: "2011-2012 Man City Home Retro Soccer Jersey",
-    categoria: "Premier League",
+    categoria: "Premier_League",
     imagen: "https://us03-imgcdn.ymcart.com/50018/2020/10/19/d/9/d9448e52d21eefe2.jpg",
     precio: "USD 19.00"
 
@@ -10,7 +10,7 @@ export const data = [
 {
     id: 2,
     nombre: "22-23 San Lorenzo Third Fans Soccer Jersey",
-    categoria: "Argentina Clubes",
+    categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/50018/2022/03/13/9/b/9b20939db4459b33.jpg",
     precio: "USD 14.50"
 
@@ -66,7 +66,7 @@ export const data = [
 {
     id: 9,
     nombre: "2000-2001 Ajax Away Retro Soccer Jersey",
-    categoria: "Holanda Clubes",
+    categoria: "Holanda_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/10/30/4/0/400e4a952874cc19.jpg",
     precio: "USD 19.00"
 
@@ -90,7 +90,7 @@ export const data = [
 {
     id: 12,
     nombre: "1985-1986 Celtic Away Retro Soccer Jersey",
-    categoria: "Escocia Clubes",
+    categoria: "Escocia_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/06/25/9/0/9019aeb3e0775524.jpg",
     precio: "USD 19.00"
 
@@ -106,7 +106,7 @@ export const data = [
 {
     id: 14,
     nombre: "2000 Boca Juniors Away Retro Soccer Jersey",
-    categoria: "Argentina Clubes",
+    categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/08/21/4/6/46a744b7c176112f.jpg",
     precio: "USD 19.00"
 
@@ -114,7 +114,7 @@ export const data = [
 {
     id: 15,
     nombre: "1996-1997 River Plate Home Retro Soccer Jersey",
-    categoria: "Argentina Clubes",
+    categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/06/25/a/d/ad9dc83bcac7baa1.jpg",
     precio: "USD 19.00"
 
@@ -122,7 +122,7 @@ export const data = [
 {
     id: 16,
     nombre: "1994 Boca Juniors Away White Retro Soccer Jersey",
-    categoria: "Argentina Clubes",
+    categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/06/25/2/c/2c002d427c3c2fdb.jpg",
     precio: "USD 19.00"
 
@@ -130,7 +130,7 @@ export const data = [
 {
     id: 17,
     nombre: "1995-1996 River Plate Away Red Retro Soccer Jersey",
-    categoria: "Argentina Clubes",
+    categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/06/25/3/5/356650ee1e1514de.jpg",
     precio: "USD 19.00"
 
