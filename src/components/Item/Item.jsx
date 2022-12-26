@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ToggleButton from "../ToggleButton/ToggleButton";
 import "./item.css";
 
 
@@ -7,6 +8,7 @@ const Item = ({producto}) => {
     return (
         <Link to={`/item/${producto.id}`} style={{ textDecoration: 'none' }}>
             <div className="card">
+                <ToggleButton icon="♥" />
                 <div className="card-img">
                     <img src={producto.imagen} alt="imagen producto" />
                 </div>

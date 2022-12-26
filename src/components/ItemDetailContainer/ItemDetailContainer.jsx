@@ -2,7 +2,7 @@ import React from 'react';
 import{ useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import { data } from "../../data/data";
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from '../ItemDetailContainer/ItemDetail';
 
 const ItemDetailContainer = () => {
   
