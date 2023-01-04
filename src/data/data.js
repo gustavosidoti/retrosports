@@ -12,7 +12,8 @@ export const data = [
     nombre: "22-23 San Lorenzo Third Fans Soccer Jersey",
     categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/50018/2022/03/13/9/b/9b20939db4459b33.jpg",
-    precio: "14.50"
+    precio: "14.50",
+    newProduct: true
 
 },
 {
@@ -20,7 +21,9 @@ export const data = [
     nombre: "1998 Argentina Away Retro Soccer Jersey",
     categoria: "Argentina",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/07/09/1/4/14cd38c72a62b35b.jpg",
-    precio: "19.00"
+    precio: "19.00",
+    discount: 20
+
 
 },
 {
@@ -52,7 +55,8 @@ export const data = [
     nombre: "1994 England Away Red Retro Soccer Jersey",
     categoria: "Inglaterra",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/07/06/0/6/0652af876d659e96.jpg",
-    precio: "19.00"
+    precio: "19.00",
+    discount: 20
 
 },
 {
@@ -68,7 +72,8 @@ export const data = [
     nombre: "2000-2001 Ajax Away Retro Soccer Jersey",
     categoria: "Holanda_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/10/30/4/0/400e4a952874cc19.jpg",
-    precio: "19.00"
+    precio: "19.00",
+    discount: 20
 
 },
 {
@@ -84,7 +89,8 @@ export const data = [
     nombre: "2018 Spain Home Retro Soccer Jersey",
     categoria: "España",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/06/25/c/f/cf1d7d10245f156b.jpg",
-    precio: "19.00"
+    precio: "19.00",
+    newProduct: true
 
 },
 {
@@ -108,7 +114,8 @@ export const data = [
     nombre: "2000 Boca Juniors Away Retro Soccer Jersey",
     categoria: "Argentina_Clubes",
     imagen: "https://us03-imgcdn.ymcart.com/92854/2022/08/21/4/6/46a744b7c176112f.jpg",
-    precio: "19.00"
+    precio: "19.00",
+    discount: 20,
 
 },
 {

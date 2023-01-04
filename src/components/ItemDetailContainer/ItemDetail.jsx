@@ -1,15 +1,16 @@
 import React from "react";
-import{ useEffect, useState, useContext} from 'react';
+import{ useState, useContext} from 'react';
 import ItemCount from "./ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 import { cartContext } from '../storage/cartContext';
 import "./itemdetail.css";
 
 const ItemDetail = ({ producto }) => {
 
   const [countInCart, setCountInCart] = useState(0);
+  
 
-
-  const { addToCart } = useContext(cartContext);
+  const { addToCart, removeItem } = useContext(cartContext);
 
   function handleAddToCart(count){
     // 1. Guardar la cantidad en un estado
@@ -30,6 +31,9 @@ const ItemDetail = ({ producto }) => {
         <h4 className="priceTag">USD {producto.precio}</h4>
       </div>
       <ItemCount onAddToCart={handleAddToCart}/>
+
+      <button onClick={() => removeItem(producto.id)}>X</button>
+      <Link to="/cartWidgetList">Ir al carrito</Link>
     </div>
   );
 };

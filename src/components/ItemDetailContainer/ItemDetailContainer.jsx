@@ -3,15 +3,17 @@ import{ useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import { data } from "../../data/data";
 import ItemDetail from '../ItemDetailContainer/ItemDetail';
+import Loader from '../Loader/Loader';
 
 
 const ItemDetailContainer = () => {
   
-    const [producto, setProducto] = useState({});
-    
+    const [producto, setProducto] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const {id} = useParams();
 
+    
     const promesa = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(data);
@@ -21,16 +23,21 @@ const ItemDetailContainer = () => {
     useEffect(() =>{
         
             promesa.then(
-                setProducto(data.find((item) => item.id === parseInt(id)))     
+                setProducto(data.find((item) => item.id === parseInt(id))),
+                setIsLoading(false)   
             );
         
     }, [id]);
+    
 
     return (
         <>
-        <div> 
-         <ItemDetail producto={producto}/>    
-        </div>
+        {
+        isLoading? 
+        <Loader />
+         :
+         <ItemDetail producto={producto}/>
+        }   
         </>
     );
   
