@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { cartContext } from '../storage/cartContext'; 
+import { cartContext } from '../../storage/cartContext'; 
 
 
 // 1- traer el array del context
@@ -17,12 +17,13 @@ const {cart, removeItem} = useContext(cartContext);
       <h1>Tu carrito</h1>
       {
         cart.map( producto =>
-          <div>
-            <h3>{producto.nombre}</h3>
+          <div key={producto.id}>
+            <h3>{producto.name}</h3>
             <p>cantidad: {producto.count}</p>
-            <p>$ {producto.precio}</p>
+            <p>$ {producto.price}</p>
             <h4>total: ${}</h4>
-            <button>Eliminar</button>
+            
+            <button onClick={() => removeItem(producto.id)}>Eliminar</button>
           </div>
           )
       }

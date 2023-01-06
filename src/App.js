@@ -1,6 +1,6 @@
 
 import './App.css';
-import { CartContextProvider } from './components/storage/cartContext';
+import { CartContextProvider } from './storage/cartContext';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Footer from './components/Footer.jsx/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -10,7 +10,12 @@ import CartWidgetList from './components/CartWidget/CartWidgetList';
 
 
 
+
+
 function App() {
+
+  
+
   return (
     <>
     <CartContextProvider>

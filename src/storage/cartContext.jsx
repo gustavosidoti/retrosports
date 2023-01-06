@@ -2,7 +2,7 @@ import { createContext, useState } from 'react';
 
 
 // 1. Iniciamos nuestro Context
-const cartContext = createContext([]); // inicializamos un array vacio puede ser objeto
+const cartContext = createContext({cart: []}); // inicializamos un array vacio puede ser objeto
 // 2. Extraemos el componente Provider
 const Provider = cartContext.Provider; // qué componentes van a acceder al context
 
@@ -16,8 +16,7 @@ function CartContextProvider(props){
 
     function addToCart(item, count){
 
-        // Creo una copia del carro
-        const newCart = [...cart];
+        
 
         // No permitir duplicados en el carro con some: retorna boolean
         //let isItemInCart = cart.some( itemInContext => itemInContext.id === item.id )
@@ -26,6 +25,8 @@ function CartContextProvider(props){
         let indexItemInCart = cart.findIndex (itemInContext => itemInContext.id === item.id )
         let isItemInCart = indexItemInCart !== -1;
 
+        // Creo una copia del carro
+        const newCart = [...cart];
 
         if ( isItemInCart ){
             // si existe actualizamos la cantidad
@@ -85,7 +86,7 @@ function CartContextProvider(props){
             totalItemsInCart,
             totalPriceInCart,
             removeItem,
-            emptyCart
+            emptyCart,
             }}>
             {props.children}
         </Provider>

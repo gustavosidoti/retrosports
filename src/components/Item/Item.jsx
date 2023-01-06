@@ -17,15 +17,15 @@ const Item = ({producto}) => {
             <div className="card">
                 <ToggleButton icon="♥" />
                 <div className="card-img">
-                    <img src={producto.imagen} alt="imagen producto" />
+                    <img src={producto.img} alt="img producto" />
                 </div>
                 <div className="card-detail">
-                    <h5>{producto.nombre}</h5>
+                    <h5>{producto.name}</h5>
                     <h4 className={classNamePrice}>
-                        USD {producto.precio}
+                        USD {producto.price}
                         <br />
                         {/*producto.discount ? <small>{producto.discount}% OFF</small> : <></> */ }
-                        {producto.discount && <small>{producto.discount}% OFF</small> }
+                        {producto.discount !== 0 && <small>{producto.discount}% OFF</small> }
                         <br />
                         {producto.newProduct && <small className={classNameNew}> new</small> }
                     </h4> 

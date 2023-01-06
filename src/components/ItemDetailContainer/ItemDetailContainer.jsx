@@ -1,7 +1,7 @@
 import React from 'react';
 import{ useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
-import { data } from "../../data/data";
+import { getSingleItem } from "../../services/firebase";
 import ItemDetail from '../ItemDetailContainer/ItemDetail';
 import Loader from '../Loader/Loader';
 
@@ -11,23 +11,20 @@ const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const {id} = useParams();
+    let {id} = useParams();
 
     
-    const promesa = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 2000);
-    });
+    async function getData() {
+        let respuesta = await getSingleItem(id);
+        setProducto(respuesta);
+        setIsLoading(false);
+    }
 
     useEffect(() =>{
         
-            promesa.then(
-                setProducto(data.find((item) => item.id === parseInt(id))),
-                setIsLoading(false)   
-            );
+            getData();
         
-    }, [id]);
+    }, []);
     
 
     return (
