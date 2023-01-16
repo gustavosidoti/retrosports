@@ -6,7 +6,7 @@ function ItemCount({ stock, onAddToCart }) {
   const [count, setCount] = useState(1);
 
   function handleAdd() {
-    if (count < 3) setCount(count + 1);
+    if (count < stock) setCount(count + 1);
   }
 
   function handleSubstract() {
@@ -17,18 +17,20 @@ function ItemCount({ stock, onAddToCart }) {
     <div className="itemcount_container">
         
       <div className="itemcount_control">
-        <Button onButtonTouch={handleSubstract}>
+        <Button color="red" onButtonTouch={handleSubstract}>
           -
         </Button>
         <span>{count}</span>
-        <Button  onButtonTouch={handleAdd}>
+        <Button color="green" onButtonTouch={handleAdd}>
           +
         </Button>
       </div>
       <div className="itemcount_btns">
-        <Button onButtonTouch={()=> onAddToCart(count)}>
+        <button className="BtnAgregar"
+          disabled={(stock == 0)}  
+          onClick={()=> onAddToCart(count)}>
           Agregar al carrito
-        </Button>
+        </button>
       </div>
     </div>
   );

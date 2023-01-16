@@ -11,8 +11,8 @@ function CartWidget() {
   const valueContext = useContext(cartContext);
   const condicion = valueContext.totalItemsInCart() > 0;
   return (
-    <div className="App" style={{fontSize: "2em", color:"#FF5733"}}>
-    <FontAwesomeIcon icon={faCartShopping} />
+    <div style={{fontSize: "2em", color:"#FF5733", textDecoration: "none"}}>
+    <FontAwesomeIcon icon={faCartShopping} className='enlaces' />
     {
       condicion && <span>{valueContext.totalItemsInCart()}</span>
     }

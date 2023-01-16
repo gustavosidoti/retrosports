@@ -11,7 +11,10 @@ function Button(props) {
   }
 
   return (
-    <button onClick={props.onButtonTouch} style={styleBtn} className={styles.btn}>
+    <button onClick={props.onButtonTouch} 
+            style={styleBtn} 
+            className={styles.btn}
+            disabled={(props.stock == 0)}>
       {props.children || props.text}
     </button>
   );

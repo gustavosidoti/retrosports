@@ -1,15 +1,16 @@
 import React from 'react';
-import { Jelly } from '@uiball/loaders'
+import { Jelly } from '@uiball/loaders';
 
 
 
 function Loader() {
   return (
     <>
-    <Jelly 
-      size={300}
+    <Jelly
+      size={250}
       speed={0.5} 
-      color="black" 
+      color="black"
+      
     /> 
     </>
   )

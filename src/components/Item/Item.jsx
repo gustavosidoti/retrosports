@@ -13,7 +13,7 @@ const Item = ({producto}) => {
     let classNamePrice = producto.discount? "offerTag" : "priceTag"
     let classNameNew = producto.newProduct && "item-new";
     return (
-        <Link to={`/item/${producto.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/item/${producto.id}`} style={{ textDecoration: 'none', color:"black" }}>
             <div className="card">
                 <ToggleButton icon="♥" />
                 <div className="card-img">

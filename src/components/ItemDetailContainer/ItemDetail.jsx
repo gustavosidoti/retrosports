@@ -1,23 +1,22 @@
 import React from "react";
-import{ useState, useContext} from 'react';
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount/ItemCount";
-import { Link } from "react-router-dom";
-import { cartContext } from '../../storage/cartContext';
+import BtnDetailPanel from "./BtnDetailPanel/BtnDetailPanel";
+import { cartContext } from "../../storage/cartContext";
 import "./itemdetail.css";
 
 const ItemDetail = ({ producto }) => {
-
   const [countInCart, setCountInCart] = useState(0);
-  
+  const [stock, setStock] = useState(producto.stock);
 
-  const { addToCart, removeItem } = useContext(cartContext);
+  const { addToCart } = useContext(cartContext);
 
-  function handleAddToCart(count){
-    // 1. Guardar la cantidad en un estado
-     setCountInCart(count);
-    // 2. ocultar el itemCount
+  function handleAddToCart(count) {
+    setStock(stock - count);
+
+    setCountInCart(count);
+
     addToCart(producto, count);
-    
   }
 
   return (
@@ -27,13 +26,17 @@ const ItemDetail = ({ producto }) => {
       </div>
       <div className="card-detail_detail">
         <h1>{producto.name}</h1>
-        <h4 className="priceTag">USD {producto.price}</h4>
+        <small>Categoría: {producto.category}</small>
+        <h4 className="priceTag">Precio: USD {producto.price}</h4>
+        <h5 className="priceTag">Stock: {stock} unidades</h5>
       </div>
-      {/* 3. ocultar el itemCount y mostrar un Link al carrito */
-      !countInCart?
-      <ItemCount onAddToCart={handleAddToCart}/>
-      :
-      <Link to="/cartWidgetList">Ir al carrito</Link>
+      {
+        /* ocultar el itemCount y mostrar un Link al carrito */
+        stock > 0 && !countInCart ? (
+          <ItemCount onAddToCart={handleAddToCart} stock={producto.stock} />
+        ) : (
+          <BtnDetailPanel></BtnDetailPanel>
+        )
       }
     </div>
   );

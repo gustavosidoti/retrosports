@@ -2,3 +2,48 @@
 .enlaces {
     text-decoration: none;
 } 
+
+.btnRemove {
+    font-Size: 1.5em; 
+    color:red; 
+    background-color: white; 
+    border: none;
+}
+
+.contenedorVacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .BtnComprar {
+    background-color: #20237c;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .BtnComprar:hover {
+    background-color: #FF5733;
+    color: white;
+  }
+
+  h3{
+    padding-bottom: 25px;
+  }
+
+  h4{
+    padding-top: 20px;
+  }
+
+  h1{
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  

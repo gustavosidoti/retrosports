@@ -12,7 +12,6 @@ const Provider = cartContext.Provider; // qué componentes van a acceder al cont
 function CartContextProvider(props){
 
     let [cart, setCart] = useState([]);
-    let saludo = "Hola desde context";
 
     function addToCart(item, count){
 
@@ -61,13 +60,15 @@ function CartContextProvider(props){
     }
 
     function totalPriceInCart (){
-        // similar a la de los items
+        return cart.reduce((prev, act) => prev + act.count * act.price, 0);
 
     }
 
-    function removeItem (id) {
+    function removeItem (idToRemove) {
         // hacer un filter que saque el id recibido
-
+        const newCart = cart.filter(itemInCart => (itemInCart.id !== idToRemove));
+        
+        setCart(newCart);
     }
 
     function emptyCart () {
@@ -81,7 +82,6 @@ function CartContextProvider(props){
     return(
         <Provider value={ {
             cart, 
-            saludo,
             addToCart,
             totalItemsInCart,
             totalPriceInCart,

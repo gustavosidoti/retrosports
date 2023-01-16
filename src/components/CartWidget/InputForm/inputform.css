@@ -1,0 +1,19 @@
+
+.BtnOrden {
+    background-color: #20237c;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    margin-left: 150px;
+    width: 145px;
+  }
+  
+  .BtnOrden:hover {
+    background-color: #FF5733;
+    color: white;
+  }
+
+  .ordenContainer{
+    padding-top: 40px;
+    text-align: center;
+  }

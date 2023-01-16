@@ -51,7 +51,7 @@ function NavBar(props) {
               </NavLink>
             </li>
           </ul>
-          <NavLink to="/cartWidgetList">
+          <NavLink to="/cartWidgetList" style={{textDecoration: "none"}}>
             <CartWidget />
           </NavLink> 
         </div>

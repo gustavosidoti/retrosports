@@ -16,3 +16,16 @@
     justify-content: space-evenly;
     padding: 2px 10px;
   }
+
+  .BtnAgregar {
+    background-color: #20237c;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    
+  }
+  
+  .BtnAgregar:hover {
+    background-color: #FF5733;
+    color: white;
+  }

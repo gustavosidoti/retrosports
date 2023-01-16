@@ -7,6 +7,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import NavBar from "./components/NavBar/NavBar";
 import CartWidgetList from './components/CartWidget/CartWidgetList';
+import ThankYou from './components/ThankYou/ThankYou';
 
 
 
@@ -26,7 +27,9 @@ function App() {
         <Route path='/category/:categoryId' element={<ItemListContainer />}/>
         <Route path='/item/:id' element={<ItemDetailContainer />}/>
         <Route path='/cartWidgetList' element={<CartWidgetList />}/>
-        
+        <Route path='/thankyou/:orderID/:name' element={<ThankYou />} />
+
+
         <Route path='*' element={ <h1>404: Recurso no encontrado </h1>}/>
       </Routes>
     </BrowserRouter>

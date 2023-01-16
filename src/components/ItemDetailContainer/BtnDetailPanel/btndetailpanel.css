@@ -1,0 +1,25 @@
+.fccBtn {
+    background-color: #20237c;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .fccBtn:hover {
+    background-color: #FF5733;
+    color: white;
+  }
+
+  .SCBtn {
+    background-color: #199817;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .SCBtn:hover {
+    background-color: #FF5733;
+    color: white;
+  }
