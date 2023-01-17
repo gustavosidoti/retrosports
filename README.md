@@ -10,16 +10,17 @@ RetroSports is a sports jersey store
 </p>
 
 <h3>Views</h3>
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/Main_dphzt7.png" height="400" width="600" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900135/React/detail_olau7q.png" height="400" width="600" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/Carro_yfirfp.png" height="400" width="600" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/gracias_qla94l.png" height="400" width="600" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/Main_dphzt7.png" height="400" width="700" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900135/React/detail_olau7q.png" height="400" width="700" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/Carro_yfirfp.png" height="400" width="700" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1673900134/React/gracias_qla94l.png" height="400" width="700" />
 
 <h3>Installation</h3>
 
 Install the dependencies and start.
 
 ```sh
+git clone https://github.com/gustavosidoti/retrosports.git
 cd retrosport
 npm i
 npm start
@@ -27,6 +28,7 @@ npm start
 
 <h3>Web link</h3>
 
+https://retrosports.netlify.app/
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

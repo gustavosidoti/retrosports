@@ -24,7 +24,6 @@ const Item = ({producto}) => {
                     <h4 className={classNamePrice}>
                         USD {producto.price}
                         <br />
-                        {/*producto.discount ? <small>{producto.discount}% OFF</small> : <></> */ }
                         {producto.discount !== 0 && <small>{producto.discount}% OFF</small> }
                         <br />
                         {producto.newProduct && <small className={classNameNew}> new</small> }

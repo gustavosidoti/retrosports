@@ -9,8 +9,7 @@ function Loader() {
     <Jelly
       size={250}
       speed={0.5} 
-      color="black"
-      
+      color="black"  
     /> 
     </>
   )
